@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f1e6;
+}
+
+#navbar .navbar {
+  background-color: #6b8e23;
+}
+
+#navbar a {
+  color: white;
+}
+
+img {
+  width: 40px;
+  height: auto;
+}
+
+.footer-text {
+  text-decoration: none;
+  font-weight: bold;
+}
