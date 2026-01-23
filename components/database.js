@@ -1,5 +1,10 @@
 console.log("hello world!");
 
+let users = [{
+    id: 1,
+    email: "admin123@gmail.com",
+    password: "12345678"
+}]
 
 let database = [
     {
