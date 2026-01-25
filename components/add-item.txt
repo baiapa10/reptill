@@ -1,0 +1,48 @@
+User clicks "Add Item" button
+    ↓
+createData() called
+    ↓
+Get input elements (getElementById)
+    ↓
+Validate nama (if empty → alert & return)
+    ↓
+Generate ID (database.length, array[index])
+    ↓
+Check if file selected (files.length)
+    ↓
+    ├─ YES: File selected
+    │      ↓
+    │   Create FileReader (new FileReader)
+    │      ↓
+    │   Set onload handler (reader.onload)
+    │      ↓
+    │   Start reading (readAsDataURL)
+    │      ↓
+    │   [Wait for file to load...]
+    │      ↓
+    │   onload fires (e.target.result = base64)
+    │      ↓
+    │   saveToDatabase(..., base64, ...)
+    │
+    └─ NO: No file
+           ↓
+        saveToDatabase(..., "no-image.png", ...)
+    
+    ↓
+saveToDatabase()
+    ↓
+Create object ({id, nama, stok, foto, deskripsi})
+    ↓
+Add to array (database.push)
+    ↓
+Convert to JSON (JSON.stringify)
+    ↓
+Save to localStorage (localStorage.setItem)
+    ↓
+Refresh display (readData)
+    ↓
+clearForm()
+    ↓
+Reset inputs (.value = "")
+    ↓
+Done! ✅
