@@ -11,33 +11,33 @@ window.addEventListener("DOMContentLoaded", function () {
   readData();
 });
 
-//Read data => DISIMPAN DALAM FUNCTION
-function readData() {
-  //1. Buat template dengan string kosong
-  let template = "";
+// //Read data => DISIMPAN DALAM FUNCTION
+// function readData() {
+//   //1. Buat template dengan string kosong
+//   let template = "";
 
-  //2. loopoing database sampai dapat perObject
-  for (let i = 0; i < database.length; i++) {
-    // console.log(database[i]);
-    let perObject = database[i];
+//   //2. loopoing database sampai dapat perObject
+//   for (let i = 0; i < database.length; i++) {
+//     // console.log(database[i]);
+//     let perObject = database[i];
 
-    //3. Didalam looping, concate variable template dengan elemen HTML
-    template += `
-      <tr>
-        <td>${perObject.id}</td>
-        <td>${perObject.nama}</td>
-        <td>${perObject.stok}</td>
-        <td>${perObject.deskripsi}</td>
-        <td><img src="${perObject.foto}" alt="${perObject.nama}" style="width: 100px;"></td>
-      </tr>
-    `;
-  }
+//     //3. Didalam looping, concate variable template dengan elemen HTML
+//     template += `
+//       <tr>
+//         <td>${perObject.id}</td>
+//         <td>${perObject.nama}</td>
+//         <td>${perObject.stok}</td>
+//         <td>${perObject.deskripsi}</td>
+//         <td><img src="${perObject.foto}" alt="${perObject.nama}" style="width: 100px;"></td>
+//       </tr>
+//     `;
+//   }
 
-  //4. Diluar looping, get element yang akan menjadi container dari elemen template
-  let tbody = document.getElementById("container-data");
-  tbody.innerHTML = template;
-}
-readData();
+//   //4. Diluar looping, get element yang akan menjadi container dari elemen template
+//   let tbody = document.getElementById("container-data");
+//   tbody.innerHTML = template;
+// }
+// readData();
 
 //Create data =>  DISIMPAN DALAM FUNCTION
 function createData() {
@@ -72,6 +72,9 @@ function createData() {
         inputDeskripsi.value,
       );
       clearForm();
+
+      //3.0.1 Saat berhasil save, menambahkan re-direct ke index.html kembali
+      window.location.href = "../index.html";
     };
 
     reader.readAsDataURL(inputFoto.files[0]);
@@ -86,6 +89,9 @@ function createData() {
       inputDeskripsi.value,
     );
     clearForm();
+
+    //3.1.1 Saat berhasil save, menambahkan re-direct ke index.html kembali
+    window.location.href = "../index.html";
   }
 }
 
@@ -103,7 +109,7 @@ function saveToDatabase(id, nama, stok, foto, deskripsi) {
   // 4.1 Simpan database ke localStorage
   localStorage.setItem("database", JSON.stringify(database));
 
-  readData();
+  // readData()
 }
 
 // 5. function untuk membersihkan form setelah submit

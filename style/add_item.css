@@ -9,7 +9,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: #f5f1e6;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
 }
@@ -24,17 +24,12 @@ body {
 
 /* Main Container */
 .add-item-content {
-  background: #ffffff;
-  width: 900px;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-  border: 3px solid #6b8e23;
+  padding: 20px 25%;
 }
 
 .add-item-content h2 {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: #6b8e23;
   letter-spacing: 1px;
 }
@@ -75,13 +70,13 @@ body {
   padding: 10px 12px;
   border-radius: 8px;
   border: 1.5px solid #cfc7b8;
-  background-color: #f5f1e6;
+  background-color: white;
   font-size: 14px;
 }
 
 .input-group textarea {
   resize: none;
-  height: 90px;
+  height: 100px;
 }
 
 .input-group input:focus,
@@ -93,7 +88,6 @@ body {
 
 /* File input styling */
 .input-group input[type="file"] {
-  background-color: #f5f1e6;
   padding: 8px;
   border-radius: 8px;
   border: 1.5px solid #cfc7b8;
@@ -212,7 +206,7 @@ body {
 
 .submit-button,
 .reset-button,
-a {
+.cancel-btn {
   width: 100%;
   margin-top: 25px;
   padding: 14px;
@@ -229,13 +223,13 @@ a {
 
 .submit-button:hover,
 .reset-button:hover,
-a:hover {
+.cancel-btn:hover {
   background-color: #556b2f;
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
-a {
+.cancel-btn {
   text-decoration: none;
   text-align: center;
 }
