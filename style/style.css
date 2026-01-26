@@ -16,12 +16,12 @@ body {
   color: white;
 }
 
-img {
-  width: 40px;
-  height: auto;
-}
-
-.footer-text {
-  text-decoration: none;
+.footer {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #6b8e23;
+  color: white;
+  text-align: center;
+  font-size: 14px;
   font-weight: bold;
 }

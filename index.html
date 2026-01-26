@@ -45,24 +45,9 @@
       </table>
     </div>
 
-    <div class="fixed-bottom">
-      <footer class="bg-body-tertiary text-center text-lg-start">
-        <div
-          class="footer-text text-center p-3"
-          style="background-color: rgba(0, 0, 0, 0.2)"
-        >
-          © 2024 Copyright
-        </div>
-      </footer>
-    </div>
+    <div id="footer"></div>
 
-    <script>
-      fetch("components/navbar.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("navbar").innerHTML = data;
-        });
-    </script>
+    <script src="../components/unload.js"></script>
     <script src="../components/database.js"></script>
     <script src="../components/index.js"></script>
   </body>
