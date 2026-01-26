@@ -20,6 +20,31 @@
   <body>
     <div id="navbar"></div>
 
+    <div id="testing-table">
+      <h2>TABLE TESTING UNTUK CEK DATA TER CREATE</h2>
+      <table border="1" style="margin-top: 20px">
+        <thead>
+          <tr>
+            <th>Kode</th>
+            <th>Item Name</th>
+            <th>Stok</th>
+            <th>Deskripsi</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+
+        <tbody id="container-data">
+          <tr>
+            <!-- <td id="test-kode">1</td>
+            <td id="test-item-name">Gecko</td>
+            <td id="test-stok">5</td>
+            <td id="test-deskripsi">-------</td>
+            <td id="test-image">../images/gecko.jpg</td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="fixed-bottom">
       <footer class="bg-body-tertiary text-center text-lg-start">
         <div
@@ -38,6 +63,7 @@
           document.getElementById("navbar").innerHTML = data;
         });
     </script>
-    <script src="components/database.js"></script>
+    <script src="../components/database.js"></script>
+    <script src="../components/index.js"></script>
   </body>
 </html>
