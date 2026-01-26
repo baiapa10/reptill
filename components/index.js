@@ -59,6 +59,12 @@ function readData() {
             >
               Edit
             </button>
+            <button 
+              class="btn btn-warning mt-auto"
+              onclick="editData(${perObject.id})"
+            >
+              delete
+            </button>
           </div>
         </div>
       </div>
