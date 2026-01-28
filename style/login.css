@@ -36,38 +36,61 @@ form {
   align-items: center;
 }
 
-/* INPUT RAPI */
+/* INPUT */
 .login-box input {
   width: 85%;
-  height: 44px;              /* tinggi sama */
-  padding: 0 14px;           /* padding kiri-kanan */
-  margin-bottom: 14px;
-  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
   border: none;
   outline: none;
   background-color: #1c1c1c;
   color: white;
   font-size: 14px;
-  box-sizing: border-box;
 }
 
 .login-box input:focus {
   box-shadow: 0 0 8px #7CFC00;
 }
 
-/* BUTTON LEBIH KECIL & CENTER */
+/* PASSWORD */
+.password-wrapper {
+  position: relative;
+  width: 85%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+#togglePassword {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* BUTTON LEBIH KECIL */
 .btn-login {
   width: 45%;
-  height: 40px;
-  margin-top: 10px;
-  border-radius: 10px;
+  padding: 10px;
+  border-radius: 8px;
   border: none;
   background-color: #2e7d32;
   color: white;
   font-size: 15px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .btn-login:hover {
   background-color: #388e3c;
+}
+
+#message {
+  margin-top: 12px;
+  font-size: 14px;
 }
