@@ -1,73 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumah Reptile</title>
+  <meta charset="UTF-8">
+  <title>Login | Rumah Reptile</title>
+  <link rel="stylesheet" href="../style/login.css">
 </head>
 <body>
-    <h1 id = "title"> Rumah Reptile</h1>
-  <!-- <h2 id = "title"> </h2> -->
-    <p id="title2">Silakan masukkan username atau email dan password</p>
-    <img id="img" src="https://mocipay.com/wp-content/uploads/2023/01/PP-Retak-untuk-WhatsApp.jpg" width="150" alt="">
 
-    <br>
-    <label for="" class="lbl">Username</label>
-    <input type="text" id="Username" oninput="consoleUsername()" >
+  <div class="login-box">
+    <h1 class="brand">🐍 Rumah Reptile</h1>
+    <p class="subtitle">Pusat Reptil Nusantara</p>
 
-    <br>
-    <label for="" class="lbl">Password</label>
-    <input type="text"  id="Password" oninput="consolePassword()">
+    <form id="loginForm" autocomplete="off">
+      <input
+        type="text"
+        id="username"
+        name="rr_user_923"
+        placeholder="Username"
+        autocomplete="new-username"
+      >
 
-    <button onclick="handleLogin()">Submit</button>
+      <input
+        type="password"
+        id="password"
+        name="rr_pass_923"
+        placeholder="Kata Sandi"
+      >      
+      <button type="submit" class="btn-login"   onclick="login()">Masuk</button>
+    </form>
+  </div>
 
-    <script>
-        let databese = [
-            {Username: "Admin", Password:"Admin123", profil: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNxUObLFt_jd8md-LmZZ7d3vnE-971uKmFQA&s"}
-        ]
-
-        let tbdyMember = document.getElementById('tbodyMember')
-        let templateStr = ""
-
-        for(let member of databese){
-            templateStr += `<tr>
-                <td>${member.Username}</td>
-                <td>${member.Password}</td>
-                <td>${member.profil}</td>
-              </tr>  `
-        }
-        tbdyMember.innerHTML = templateStr
-
-        let isLogin;
-
-         function consoleUsername() {
-        var textInput = document.getElementById('Username');// html collection -> elemen html
-        console.log(textInput.value);
-      }
-
-       function consolePassword() {
-        var textInputPassword = document.getElementById('Password');// html collection -> elemen html
-        console.log(textInputPassword.value);
-      }
-
-      function handleLogin(){
-        if(isLogin === false){
-            isLogin = true
-        }else{
-            isLogin = false
-        }
-        checkLogin()
-      }
-
-      function checkLogin(){
-        if(isLogin === true){
-            idTitle2.innerHTML = `Selamat Datang ${Username}`
-            idTitle2.style.color = "green"
-            idTitle2.src=`${member.profil}`
-        }
-      }
-      console.log(idTitle2);
-      
-    </script>
-</body> 
+  <script src="../components/login.js"></script>
+</body>
 </html>
