@@ -1,25 +1,31 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rumah Reptile</title>
+    <link rel="icon" type="image/png" href="../images/icon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bootstrap demo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style/style.css" />
-</head>
+  <body>
+    <div id="navbar"></div>
 
-<body>
-  <div id="navbar"></div>
-
-  <div id="testing-table">
-    <!-- <h2>TABLE TESTING UNTUK CEK DATA TER CREATE</h2> -->
-    <table border="1" style="margin-top: 20px">
-      <!-- <thead>
+    <div id="testing-table">
+      <!-- <h2>TABLE TESTING UNTUK CEK DATA TER CREATE</h2> -->
+      <table border="1" style="margin-top: 20px">
+        <!-- <thead>
           <tr>
             <th>Kode</th>
             <th>Item Name</th>
@@ -29,24 +35,23 @@
           </tr>
         </thead> -->
 
-      <div class="row row-cols-1 row-cols-md-5 g-4" id="container-data">
-
-        <tr>
-          <!-- <td id="test-kode">1</td>
+        <div class="row row-cols-1 row-cols-md-5 g-4" id="container-data">
+          <tr>
+            <!-- <td id="test-kode">1</td>
             <td id="test-item-name">Gecko</td>
             <td id="test-stok">5</td>
             <td id="test-deskripsi">-------</td>
             <td id="test-image">../images/gecko.jpg</td> -->
-        </tr>
-      </div>
-    </table>
-  </div>
+          </tr>
+        </div>
+      </table>
+    </div>
 
-  <div id="footer"></div>
+    <div id="footer"></div>
 
-  <script src="../components/unload.js"></script>
-  <script src="../components/database.js"></script>
-  <script src="../components/index.js"></script>
-</body>
-
+    <script src="../components/unload.js"></script>
+    <script src="../components/database.js"></script>
+    <script src="../components/index.js"></script>
+    <script src="../components/add-item.js"></script>
+  </body>
 </html>

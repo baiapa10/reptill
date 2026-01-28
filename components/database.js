@@ -15,7 +15,8 @@ let database = [
     stok: 5,
     harga: 200_000,
     foto: "../images/gecko.jpg",
-    deskripsi: "Reptil kecil yang aktif di malam hari dan mampu memanjat dinding berkat bantalan lengket di kakinya.",
+    deskripsi:
+      "Reptil kecil yang aktif di malam hari dan mampu memanjat dinding berkat bantalan lengket di kakinya.",
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ let database = [
     stok: 2,
     harga: 6_000_000,
     foto: "../images/iguana.jpg",
-    deskripsi: "Reptil herbivora berukuran besar yang dikenal tenang dan sering berjemur untuk mengatur suhu tubuhnya.",
+    deskripsi:
+      "Reptil herbivora berukuran besar yang dikenal tenang dan sering berjemur untuk mengatur suhu tubuhnya.",
   },
   {
     id: 3,
@@ -31,7 +33,8 @@ let database = [
     stok: 1,
     harga: 200_000,
     foto: "../images/ularPython.jpg",
-    deskripsi: "Ular besar yang tidak berbisa dan membunuh mangsanya dengan cara melilit sebelum menelan secara utuh.",
+    deskripsi:
+      "Ular besar yang tidak berbisa dan membunuh mangsanya dengan cara melilit sebelum menelan secara utuh.",
   },
   {
     id: 4,
@@ -39,7 +42,8 @@ let database = [
     stok: 5,
     harga: 450_000_000_000,
     foto: "../images/dinosaurus.jpg",
-    deskripsi: "Reptil purba yang hidup jutaan tahun lalu dan kini hanya dapat dipelajari melalui fosil dan penelitian ilmiah.",
+    deskripsi:
+      "Reptil purba yang hidup jutaan tahun lalu dan kini hanya dapat dipelajari melalui fosil dan penelitian ilmiah.",
   },
   {
     id: 5,
@@ -47,7 +51,8 @@ let database = [
     stok: 2,
     harga: 6_500_000,
     foto: "../images/kura-kura.jpeg",
-    deskripsi: "Reptil bercangkang keras yang bergerak lambat dan memiliki umur hidup yang sangat panjang.",
+    deskripsi:
+      "Reptil bercangkang keras yang bergerak lambat dan memiliki umur hidup yang sangat panjang.",
   },
   {
     id: 6,
@@ -55,7 +60,8 @@ let database = [
     harga: 4_500_000,
     stok: 1,
     foto: "../images/kadalGurun.jpg",
-    deskripsi: "Kadal yang hidup di daerah panas dan kering dengan kemampuan beradaptasi terhadap suhu ekstrem.",
+    deskripsi:
+      "Kadal yang hidup di daerah panas dan kering dengan kemampuan beradaptasi terhadap suhu ekstrem.",
   },
   {
     id: 7,
@@ -63,7 +69,8 @@ let database = [
     stok: 5,
     harga: 256_000,
     foto: "../images/komodo.jpg",
-    deskripsi: "Kadal terbesar di dunia yang berasal dari Indonesia dan dikenal sebagai predator kuat dengan gigitan berbahaya.",
+    deskripsi:
+      "Kadal terbesar di dunia yang berasal dari Indonesia dan dikenal sebagai predator kuat dengan gigitan berbahaya.",
   },
   {
     id: 8,
@@ -71,7 +78,8 @@ let database = [
     stok: 2,
     harga: 20_000,
     foto: "../images/bunglon.jpg",
-    deskripsi: "Reptil unik yang dapat mengubah warna kulitnya untuk kamuflase dan komunikasi.",
+    deskripsi:
+      "Reptil unik yang dapat mengubah warna kulitnya untuk kamuflase dan komunikasi.",
   },
   {
     id: 9,
@@ -79,7 +87,8 @@ let database = [
     stok: 1,
     harga: 6_000,
     foto: "../images/tokek.jpg",
-    deskripsi: "Reptil nokturnal yang dikenal dengan suara khasnya dan kemampuan menempel kuat di permukaan licin.",
+    deskripsi:
+      "Reptil nokturnal yang dikenal dengan suara khasnya dan kemampuan menempel kuat di permukaan licin.",
   },
 ];
 
