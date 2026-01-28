@@ -30,53 +30,51 @@ window.addEventListener("DOMContentLoaded", function () {
 // }, 6000);
 
 //Read data => DISIMPAN DALAM FUNCTION
-function readData() {
-  //1. Buat template dengan string kosong
+function readData(data = database) {
   let template = "";
 
-  //2. loopoing database sampai dapat perObject
-  for (let i = 0; i < database.length; i++) {
-    // console.log(database[i]);
-    let perObject = database[i];
+  for (let i = 0; i < data.length; i++) {
+    let perObject = data[i];
 
-    //3. Didalam looping, concate variable template dengan elemen HTML
     template += `
       <div class="col reptile-card">
         <div class="card h-100">
-          <img 
-            src="${perObject.foto}" 
-            class="card-img-top card-img-custom" 
-            alt="${perObject.nama}"
-          >
-          <div class="card-body">
+          <img src="${perObject.foto}" class="card-img-top card-img-custom">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">${perObject.nama}</h5>
             <p class="card-text">
               <strong>Stok:</strong> ${perObject.stok}<br>
               <strong>Harga:</strong> ${perObject.harga}<br>
               <strong>Deskripsi:</strong> ${perObject.deskripsi}
             </p>
-            <button 
-              class="btn btn-warning mt-auto"
-              onclick="editData(${perObject.id})"
-              
-            >
-              Edit
-            </button>
-            <button 
-              class="btn btn-warning mt-auto"
-              onclick="editData(${perObject.id})"
-            >
-              delete
-            </button>
+            <div class="mt-auto">
+              <button class="btn btn-warning" onclick="editData(${perObject.id})">Edit</button>
+              <button class="btn btn-danger" onclick="deleteData(${perObject.id})">Delete</button>
+            </div>
           </div>
         </div>
       </div>
     `;
   }
 
-  //4. Diluar looping, get element yang akan menjadi container dari elemen template
   document.getElementById("container-data").innerHTML = template;
-  // let tbody = document.getElementById("container-data");
-  tbody.innerHTML = template;
 }
+
+function searchByName() {
+  let keyword = document.getElementById("searchInput").value.toLowerCase();
+
+  let filteredData = [];
+
+  for (let i = 0; i < database.length; i++) {
+    let nama = database[i].nama.toLowerCase();
+
+    if (nama.includes(keyword)) {
+      filteredData.push(database[i]);
+    }
+  }
+
+  readData(filteredData);
+}
+
+
 readData();
