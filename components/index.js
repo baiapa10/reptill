@@ -9,6 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
   readData();
 });
 
+
 // let banners = [
 //   "../images/banner1.jpg",
 //   "../images/banner2.jpg",
@@ -51,11 +52,13 @@ function readData() {
             <h5 class="card-title">${perObject.nama}</h5>
             <p class="card-text">
               <strong>Stok:</strong> ${perObject.stok}<br>
+              <strong>Harga:</strong> ${perObject.harga}<br>
               <strong>Deskripsi:</strong> ${perObject.deskripsi}
             </p>
             <button 
               class="btn btn-warning mt-auto"
               onclick="editData(${perObject.id})"
+              
             >
               Edit
             </button>
