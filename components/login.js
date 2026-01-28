@@ -24,10 +24,9 @@ form.addEventListener("submit", function (e) {
     }
   }
 
-  if (valid) {
-    alert("✅ Login berhasil!");
+  if (!valid) {
+    alert("❌ Username atau password salah!")
+} else {
     window.location.href = "../index.html"
-  } else {
-    alert("❌ Username atau password salah!");
   }
 });

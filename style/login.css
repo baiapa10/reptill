@@ -1,97 +1,91 @@
-.login-page {
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+/* BACKGROUND */
+body {
   margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(124,252,0,0.35), transparent 55%),
+    radial-gradient(circle at bottom, rgba(124,252,0,0.2), transparent 60%),
+    #0a0f0c;
 }
 
-
-.login-box {
-  width: 340px;
-  padding: 35px;
-  background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 15px;
+/* LOGIN PANEL — DISAMAKAN DENGAN DESAIN */
+.login-page {
+  width: 460px;
+  padding: 42px;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 32, 30, 0.98),
+    rgba(10, 12, 11, 0.98)
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(124,252,0,0.35);
   text-align: center;
-  box-shadow: 0 0 25px rgba(0, 255, 100, 0.4);
+  box-shadow:
+    0 0 55px rgba(124,252,0,0.35),
+    inset 0 0 30px rgba(255,255,255,0.04);
   color: white;
 }
 
+/* TITLE */
 .brand {
   margin: 0;
+  font-size: 30px;
+  font-weight: bold;
   color: #7CFC00;
+  text-shadow:
+    0 0 10px rgba(124,252,0,0.9),
+    0 0 25px rgba(124,252,0,0.6);
 }
 
 .subtitle {
-  font-size: 13px;
-  color: #ccc;
-  margin-bottom: 25px;
+  margin: 10px 0 28px;
+  font-size: 14px;
+  color: #cfcfcf;
 }
 
-/* FORM CENTER */
+/* FORM */
 form {
   display: flex;
   flex-direction: column;
+  gap: 16px;
   align-items: center;
+  
 }
 
 /* INPUT */
-.login-box input {
-  width: 85%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  background-color: #1c1c1c;
-  color: white;
-  font-size: 14px;
-}
-
-.login-box input:focus {
-  box-shadow: 0 0 8px #7CFC00;
-}
-
-/* PASSWORD */
-.password-wrapper {
-  position: relative;
-  width: 85%;
-}
-
-.password-wrapper input {
+.login-page input {
   width: 100%;
-  padding-right: 40px;
+  height: 50px;
+  padding: 0 18px;
+  border-radius: 12px;
+  border: 1px solid #3d3d3d;
+  background: linear-gradient(#1a1f1c, #0f1211);
+color: white;
 }
 
-#togglePassword {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  user-select: none;
-}
-
-/* BUTTON LEBIH KECIL */
-.btn-login {
+  .btn-login {
   width: 45%;
-  padding: 10px;
-  border-radius: 8px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 10px;
   border: none;
   background-color: #2e7d32;
   color: white;
   font-size: 15px;
   cursor: pointer;
-  margin-top: 10px;
+  text-align: center;
+  margin-right: '50px';
 }
 
 .btn-login:hover {
   background-color: #388e3c;
-}
-
-#message {
-  margin-top: 12px;
-  font-size: 14px;
 }
