@@ -3,34 +3,17 @@
     <a class="navbar-brand" href="../index.html">
       <img src="../images/logoo.png" height="70" />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="../pages/add_item.html"
-            >Add</a
-          >
+          <a class="nav-link active" aria-current="page" href="../pages/add_item.html">Add</a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            type="button"
-            onclick="resetDatabase()"
-          >
+          <a class="nav-link active" aria-current="page" type="button" onclick="resetDatabase()">
             Reset
           </a>
         </li>
@@ -57,13 +40,24 @@
         </li>
       </ul>
       <form class="d-flex" role="search" onsubmit="return false;">
-        <input
-          id="searchInput"
-          class="form-control me-2"
-          type="search"
-          placeholder="Search reptile..."
-        />
+        <!-- <input id="searchInput" class="form-control me-2" type="search" placeholder="Search reptile..." /> -->
+        <div class="form-outline" data-mdb-input-init>
+          <input 
+            type="search" 
+            id="searchInput" 
+            class="form-control" 
+            placeholder="cari reptile" 
+            aria-label="Search" 
+            oninput="searchByName()"
+            />
+        </div>
       </form>
+      <script>
+        // Initialization for ES Users
+        import { Input, initMDB } from "mdb-ui-kit";
+
+        initMDB({ Input });
+      </script>
     </div>
   </div>
 </nav>
