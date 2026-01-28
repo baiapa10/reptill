@@ -27,6 +27,7 @@ window.addEventListener("DOMContentLoaded", function () {
 //         <td>${perObject.id}</td>
 //         <td>${perObject.nama}</td>
 //         <td>${perObject.stok}</td>
+//         <td>${perObject.harga}</td>
 //         <td>${perObject.deskripsi}</td>
 //         <td><img src="${perObject.foto}" alt="${perObject.nama}" style="width: 100px;"></td>
 //       </tr>
@@ -44,6 +45,7 @@ function createData() {
   //1. Ambil value dari form input
   let inputNama = document.getElementById("nama");
   let inputStok = document.getElementById("stok");
+  let inputHarga = document.getElementById("harga");
   let inputFoto = document.getElementById("foto");
   let inputDeskripsi = document.getElementById("deskripsi");
 
@@ -68,6 +70,7 @@ function createData() {
         id,
         inputNama.value,
         inputStok.value,
+        inputHarga.value,
         e.target.result,
         inputDeskripsi.value,
       );
@@ -85,6 +88,7 @@ function createData() {
       id,
       inputNama.value,
       inputStok.value,
+      inputHarga.value,
       "../images/no-image.png",
       inputDeskripsi.value,
     );
@@ -96,11 +100,12 @@ function createData() {
 }
 
 // 4. function untuk menyimpan data ke database dan localStorage
-function saveToDatabase(id, nama, stok, foto, deskripsi) {
+function saveToDatabase(id, nama, stok, harga, foto, deskripsi) {
   let newObject = {
     id: id,
     nama: nama,
     stok: Number(stok),
+    harga: Number(harga),
     foto: foto, // Base64 string stored here
     deskripsi: deskripsi,
   };
@@ -117,6 +122,7 @@ function clearForm() {
   //5.1 Bersihkan data dari createData function
   document.getElementById("nama").value = "";
   document.getElementById("stok").value = "0";
+  document.getElementById("harga").value = "0";
   document.getElementById("foto").value = "";
   document.getElementById("deskripsi").value = "";
 

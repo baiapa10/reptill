@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: #f5f1e6;
   display: block;
   justify-content: center;
@@ -24,7 +24,10 @@ body {
 
 /* Main Container */
 .add-item-content {
-  padding: 20px 25%;
+  margin: 50px 10%;
+  padding: 20px 20px;
+  border: 3px solid #6b8e23;
+  border-radius: 14px;
 }
 
 .add-item-content h2 {
@@ -100,7 +103,7 @@ body {
   margin-top: 12px;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 25%;
   height: 200px;
   border-radius: 12px;
   border: 2px dashed #6b8e23;
