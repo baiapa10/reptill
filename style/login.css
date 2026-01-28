@@ -1,4 +1,4 @@
-body {
+.login-page {
   margin: 0;
   height: 100vh;
   display: flex;
@@ -7,6 +7,7 @@ body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   font-family: Arial, sans-serif;
 }
+
 
 .login-box {
   width: 340px;

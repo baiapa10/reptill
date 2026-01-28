@@ -1,73 +1,48 @@
-body {
+* {
   margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  font-family: Arial, sans-serif;
-}
-
-.login-box {
-  width: 340px;
-  padding: 35px;
-  background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(0, 255, 100, 0.4);
-  color: white;
-}
-
-.brand {
-  margin: 0;
-  color: #7CFC00;
-}
-
-.subtitle {
-  font-size: 13px;
-  color: #ccc;
-  margin-bottom: 25px;
-}
-
-/* FORM CENTER */
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* INPUT RAPI */
-.login-box input {
-  width: 85%;
-  height: 44px;              /* tinggi sama */
-  padding: 0 14px;           /* padding kiri-kanan */
-  margin-bottom: 14px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  background-color: #1c1c1c;
-  color: white;
-  font-size: 14px;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.login-box input:focus {
-  box-shadow: 0 0 8px #7CFC00;
+body {
+  background-color: #f5f1e6;
 }
 
-/* BUTTON LEBIH KECIL & CENTER */
-.btn-login {
-  width: 45%;
-  height: 40px;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: none;
-  background-color: #2e7d32;
+#navbar .navbar {
+  background-color: #6b8e23;
+}
+
+#navbar a {
   color: white;
-  font-size: 15px;
-  cursor: pointer;
 }
 
-.btn-login:hover {
-  background-color: #388e3c;
+.footer {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #6b8e23;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card-img-custom {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  padding: 6px;
+  /* margin-left: 10; */
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
