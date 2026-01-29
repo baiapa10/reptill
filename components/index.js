@@ -9,7 +9,6 @@ window.addEventListener("DOMContentLoaded", function () {
   readData();
 });
 
-
 function searchByName() {
   let keyword = document.getElementById("searchInput").value.toLowerCase();
   let filteredData = [];
@@ -53,4 +52,18 @@ function readData(data = database) {
   }
 
   document.getElementById("container-data").innerHTML = template;
+}
+
+// Edit data berdasarkan id
+function editData(id) {
+  window.location.href = `pages/edit-item.html?id=${id}`;
+}
+
+// Hapus data berdasarkan id
+function deleteData(id) {
+  if (!confirm("Delete this item?")) return;
+
+  database = database.filter((item) => item.id !== id);
+  localStorage.setItem("database", JSON.stringify(database));
+  readData();
 }
