@@ -9,26 +9,22 @@ window.addEventListener("DOMContentLoaded", function () {
   readData();
 });
 
-// let banners = [
-//   "../images/banner1.jpg",
-//   "../images/banner2.jpg",
-//   "../images/banner3.jpg"
-// ];
 
-// let currentIndex = 0;
-// let bannerImg = document.getElementById("banner-img");
+function searchByName() {
+  let keyword = document.getElementById("searchInput").value.toLowerCase();
+  let filteredData = [];
 
-// setInterval(function () {
-//   currentIndex++;
+  for (let i = 0; i < database.length; i++) {
+    let nama = database[i].nama.toLowerCase();
 
-//   if (currentIndex >= banners.length) {
-//     currentIndex = 0;
-//   }
+    if (nama.includes(keyword)) {
+      filteredData.push(database[i]);
+    }
+  }
 
-//   bannerImg.src = banners[currentIndex];
-// }, 6000);
+  readData(filteredData);
+}
 
-//Read data => DISIMPAN DALAM FUNCTION
 function readData(data = database) {
   let template = "";
 
@@ -36,7 +32,7 @@ function readData(data = database) {
     let perObject = data[i];
 
     template += `
-      <div class="col reptile-card">
+    <div class="col reptile-card">
         <div class="card h-100">
           <img src="${perObject.foto}" class="card-img-top card-img-custom">
           <div class="card-body d-flex flex-column">
@@ -58,35 +54,3 @@ function readData(data = database) {
 
   document.getElementById("container-data").innerHTML = template;
 }
-
-function searchByName() {
-  let keyword = document.getElementById("searchInput").value.toLowerCase();
-
-  let filteredData = [];
-
-  for (let i = 0; i < database.length; i++) {
-    let nama = database[i].nama.toLowerCase();
-
-    if (nama.includes(keyword)) {
-      filteredData.push(database[i]);
-    }
-  }
-
-  readData(filteredData);
-}
-
-// Go to edit page with id as query string
-function editData(id) {
-  window.location.href = `pages/edit-item.html?id=${id}`;
-}
-
-// Delete data by id
-function deleteData(id) {
-  if (!confirm("Delete this item?")) return;
-
-  database = database.filter((item) => item.id !== id);
-  localStorage.setItem("database", JSON.stringify(database));
-  readData();
-}
-
-readData();
