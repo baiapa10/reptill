@@ -5,34 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Item</title>
     <link rel="icon" type="image/png" href="../images/icon.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/add_item.css" />
+    <link rel="stylesheet" href="../style/page-item.css" />
   </head>
   <body>
-    <!-- <div id="navbar"></div> -->
-
     <div class="add-item-content">
       <h2>Add Item</h2>
 
       <form class="add-item-form">
         <div class="form-body">
           <div class="item-info">
-            <!-- <div class="input-group">
-              <label for="id">Kode:</label>
-              <input type="number" id="id" min="0" required />
-            </div> -->
-
             <div class="input-group">
               <label for="nama">Item Name:</label>
               <input type="text" id="nama" />
@@ -79,92 +61,10 @@
               <textarea name="deskripsi" id="deskripsi"></textarea>
             </div>
           </div>
-
-          <!-- <div class="input-image">
-            <p>Pilih Gambar:</p>
-
-            <div class="image-choices">
-              <label>
-                <input
-                  type="radio"
-                  name="image"
-                  value="../images/bunglon.jpg"
-                  required
-                />
-                <img src="../images/bunglon.jpg" alt="Image 1" width="80" />
-                <p>Bunglon</p>
-              </label>
-
-              <label>
-                <input type="radio" name="image" value="../images/gecko.jpg" />
-                <img src="../images/gecko.jpg" alt="Image 2" width="80" />
-                <p>Gecko</p>
-              </label>
-
-              <label>
-                <input type="radio" name="image" value="../images/iguana.jpg" />
-                <img src="../images/iguana.jpg" alt="Image 3" width="80" />
-                <p>Iguana</p>
-              </label>
-
-              <label>
-                <input
-                  type="radio"
-                  name="image"
-                  value="../images/kadalGurun.jpg"
-                />
-                <img src="../images/kadalGurun.jpg" alt="Image 4" width="80" />
-                <p>Kadal Gurun</p>
-              </label>
-
-              <label>
-                <input type="radio" name="image" value="../images/komodo.jpg" />
-                <img src="../images/komodo.jpg" alt="Image 5" width="80" />
-                <p>Komodo</p>
-              </label>
-
-              <label>
-                <input
-                  type="radio"
-                  name="image"
-                  value="../images/kura-kura.jpeg"
-                />
-                <img src="../images/kura-kura.jpeg" alt="Image 6" width="80" />
-                <p>Kura-Kura</p>
-              </label>
-
-              <label>
-                <input type="radio" name="image" value="../images/tokek.jpg" />
-                <img src="../images/tokek.jpg" alt="Image 7" width="80" />
-                <p>Tokek</p>
-              </label>
-
-              <label>
-                <input
-                  type="radio"
-                  name="image"
-                  value="../images/ularPython.jpg"
-                />
-                <img src="../images/ularPython.jpg" alt="Image 8" width="80" />
-                <p>Ular Python</p>
-              </label>
-
-              <label>
-                <input
-                  type="radio"
-                  name="image"
-                  value="../images/dinosaurus.jpg"
-                />
-                <img src="../images/dinosaurus.jpg" alt="Image 9" width="80" />
-                <p>Dinosaurus</p>
-              </label>
-            </div>
-          </div> -->
         </div>
 
         <div class="buttons">
           <a class="cancel-btn" href="../index.html">Cancel</a>
-          <!-- onclick="createData()" dimasukan dalam button untuk INVOKE -->
           <button type="button" onclick="createData()" class="submit-button">
             Add Item
           </button>
@@ -174,27 +74,6 @@
         </div>
       </form>
     </div>
-
-    <!-- <div id="testing-table">
-      <h2>TABLE TESTING UNTUK CEK DATA TER CREATE</h2>
-      <table border="1" style="margin-top: 20px">
-        <thead>
-          <tr>
-            <th>Kode</th>
-            <th>Item Name</th>
-            <th>Stok</th>
-            <th>Deskripsi</th>
-            <th>Image</th>
-          </tr>
-        </thead>
-
-        <tbody id="container-data">
-          <tr>
-          </tr>
-        </tbody>
-      </table>
-    </div> -->
-
     <div id="footer"></div>
 
     <script src="../components/unload.js"></script>
