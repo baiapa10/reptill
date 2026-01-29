@@ -8,10 +8,14 @@ body {
   background-color: #f5f1e6;
 }
 
+.navbar {
+  padding: 0;
+}
+
 #navbar .navbar {
   background:
-    radial-gradient(circle at top, rgba(124,252,0,0.35), transparent 55%),
-    radial-gradient(circle at bottom, rgba(124,252,0,0.2), transparent 60%),
+    radial-gradient(circle at top, rgba(124, 252, 0, 0.35), transparent 55%),
+    radial-gradient(circle at bottom, rgba(124, 252, 0, 0.2), transparent 60%),
     #1f6b3d;
 }
 
@@ -23,8 +27,8 @@ body {
   width: 100%;
   padding: 12px 0;
   background:
-    radial-gradient(circle at top, rgba(124,252,0,0.35), transparent 55%),
-    radial-gradient(circle at bottom, rgba(124,252,0,0.2), transparent 60%),
+    radial-gradient(circle at top, rgba(124, 252, 0, 0.35), transparent 55%),
+    radial-gradient(circle at bottom, rgba(124, 252, 0, 0.2), transparent 60%),
     #1d5d37;
   color: white;
   text-align: center;
@@ -61,15 +65,13 @@ body {
   height: 100%;
 }
 
-
-
-.card{
+.card {
   margin-left: 20px;
   margin-right: 30px;
   /* margin-bottom: 20px; */
 }
 
-.card:hover{
+.card:hover {
   /* background-color: #556b2f; */
   transform: translateY(-10px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
@@ -82,9 +84,8 @@ body {
 .search-container {
   display: flex;
   justify-content: space-between; /* kiri & kanan */
-  align-items: center;           /* sejajar vertikal */
+  align-items: center; /* sejajar vertikal */
   margin-bottom: 20px;
-  
 }
 
 .list {
@@ -96,4 +97,8 @@ body {
   width: 200px; /* bisa kamu atur */
   margin-right: 40px;
   margin-top: 20px;
+}
+
+#container-data {
+  margin-bottom: 50px;
 }
