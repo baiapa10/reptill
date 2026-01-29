@@ -10,26 +10,21 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// let banners = [
-//   "../images/banner1.jpg",
-//   "../images/banner2.jpg",
-//   "../images/banner3.jpg"
-// ];
+function searchByName() {
+  let keyword = document.getElementById("searchInput").value.toLowerCase();
+  let filteredData = [];
 
-// let currentIndex = 0;
-// let bannerImg = document.getElementById("banner-img");
+  for (let i = 0; i < database.length; i++) {
+    let nama = database[i].nama.toLowerCase();
 
-// setInterval(function () {
-//   currentIndex++;
+    if (nama.includes(keyword)) {
+      filteredData.push(database[i]);
+    }
+  }
 
-//   if (currentIndex >= banners.length) {
-//     currentIndex = 0;
-//   }
+  readData(filteredData);
+}
 
-//   bannerImg.src = banners[currentIndex];
-// }, 6000);
-
-//Read data => DISIMPAN DALAM FUNCTION
 function readData(data = database) {
   let template = "";
 
@@ -37,7 +32,7 @@ function readData(data = database) {
     let perObject = data[i];
 
     template += `
-      <div class="col reptile-card">
+    <div class="col reptile-card">
         <div class="card h-100">
           <img src="${perObject.foto}" class="card-img-top card-img-custom">
           <div class="card-body d-flex flex-column">
@@ -59,22 +54,3 @@ function readData(data = database) {
 
   document.getElementById("container-data").innerHTML = template;
 }
-
-function searchByName() {
-  let keyword = document.getElementById("searchInput").value.toLowerCase();
-
-  let filteredData = [];
-
-  for (let i = 0; i < database.length; i++) {
-    let nama = database[i].nama.toLowerCase();
-
-    if (nama.includes(keyword)) {
-      filteredData.push(database[i]);
-    }
-  }
-
-  readData(filteredData);
-}
-
-
-readData();
