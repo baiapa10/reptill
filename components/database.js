@@ -14,7 +14,7 @@ let database = [
     nama: "Gecko",
     stok: 5,
     harga: 200_000,
-    foto: "../images/gecko.jpg",
+    foto: "images/gecko.jpg",
     deskripsi:
       "Reptil kecil yang aktif di malam hari dan mampu memanjat dinding berkat bantalan lengket di kakinya.",
   },
