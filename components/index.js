@@ -38,7 +38,7 @@ function readData(data = database) {
             <h5 class="card-title">${perObject.nama}</h5>
             <p class="card-text">
               <strong>Stok:</strong> ${perObject.stok}<br>
-              <strong>Harga:</strong> ${perObject.harga}<br>
+              <strong>Harga:</strong> Rp.${perObject.harga},00<br>
               <strong>Deskripsi:</strong> ${perObject.deskripsi}
             </p>
             <div class="mt-auto">
