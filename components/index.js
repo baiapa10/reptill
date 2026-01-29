@@ -9,7 +9,6 @@ window.addEventListener("DOMContentLoaded", function () {
   readData();
 });
 
-
 // let banners = [
 //   "../images/banner1.jpg",
 //   "../images/banner2.jpg",
@@ -76,5 +75,18 @@ function searchByName() {
   readData(filteredData);
 }
 
+// Go to edit page with id as query string
+function editData(id) {
+  window.location.href = `pages/edit-item.html?id=${id}`;
+}
+
+// Delete data by id
+function deleteData(id) {
+  if (!confirm("Delete this item?")) return;
+
+  database = database.filter((item) => item.id !== id);
+  localStorage.setItem("database", JSON.stringify(database));
+  readData();
+}
 
 readData();
