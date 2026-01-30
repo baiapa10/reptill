@@ -34,8 +34,8 @@ function createData() {
       );
       clearForm();
 
-      // 1.4.1 Saat berhasil save, menambahkan re-direct ke index.html kembali
-      window.location.href = "../index.html";
+      // 1.4.1 Saat berhasil save, menambahkan re-direct ke home.html kembali
+      window.location.href = "/reptill/pages/home.html";
     };
 
     reader.readAsDataURL(inputFoto.files[0]);
@@ -48,13 +48,13 @@ function createData() {
       inputNama.value,
       inputStok.value,
       inputHarga.value,
-      "../images/no-image.png",
+      "/reptill/images/no-image.png",
       inputDeskripsi.value,
     );
     clearForm();
 
-    // 1.5.1 Saat berhasil save, menambahkan re-direct ke index.html kembali
-    window.location.href = "../index.html";
+    // 1.5.1 Saat berhasil save, menambahkan re-direct ke home.html kembali
+    window.location.href = "/reptill/pages/home.html";
   }
 }
 

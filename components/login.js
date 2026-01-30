@@ -3,7 +3,7 @@ const form = document.getElementById("loginForm");
 const users = [
   { username: "reptile", password: "12345" },
   { username: "admin", password: "admin123" },
-  { username: "owner", password: "rumahreptile" }
+  { username: "owner", password: "rumahreptile" },
 ];
 
 form.addEventListener("submit", function (e) {
@@ -15,18 +15,15 @@ form.addEventListener("submit", function (e) {
   let valid = false;
 
   for (let i = 0; i < users.length; i++) {
-    if (
-      users[i].username === username &&
-      users[i].password === password
-    ) {
+    if (users[i].username === username && users[i].password === password) {
       valid = true;
       break;
     }
   }
 
   if (!valid) {
-    alert("❌ Username atau password salah!")
-} else {
-    window.location.href = "../index.html"
+    alert("❌ Username atau password salah!");
+  } else {
+    window.location.href = "/reptill/pages/home.html";
   }
 });
