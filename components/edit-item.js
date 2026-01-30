@@ -8,9 +8,9 @@ window.addEventListener("DOMContentLoaded", function () {
   const params = new URLSearchParams(window.location.search);
   const idParam = params.get("id");
 
-  //1.2 Validasi id, jika tidak ada, redirect ke index.html
+  //1.2 Validasi id, jika tidak ada, redirect ke home.html
   if (!idParam) {
-    window.location.href = "../index.html";
+    window.location.href = "/reptill/pages/home.html";
     return;
   }
 
@@ -23,10 +23,10 @@ window.addEventListener("DOMContentLoaded", function () {
     database = JSON.parse(savedDatabase);
   }
 
-  //1.5 Cari item berdasarkan id, jika tidak ada, redirect ke index.html
+  //1.5 Cari item berdasarkan id, jika tidak ada, redirect ke home.html
   const item = database.find((obj) => obj.id === currentItemId);
   if (!item) {
-    window.location.href = "../index.html";
+    window.location.href = "/reptill/pages/home.html";
     return;
   }
 
@@ -116,5 +116,5 @@ function updateItem() {
 
   //3.3 Simpan perubahan ke localStorage
   localStorage.setItem("database", JSON.stringify(database));
-  window.location.href = "../index.html";
+  window.location.href = "/reptill/pages/home.html";
 }

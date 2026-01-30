@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rumah Reptile</title>
+    <link rel="icon" type="image/png" href="/reptill/images/icon.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/reptill/style/style.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="banner" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/reptill/images/banner1.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/reptill/images/banner2.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="/reptill/images/banner3.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+    </div>
+    <div class="search-container">
+      <h3 class="list">LIST Reptil</h3>
+      <form class="d-flex" role="search" onsubmit="return false;">
+        <div class="form-outline" data-mdb-input-init>
+          <input
+            type="search"
+            id="searchInput"
+            class="form-control"
+            placeholder="Cari reptil"
+            aria-label="Search"
+            oninput="searchByName()"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="row row-cols-2 row-cols-md-4 g-3" id="container-data"></div>
+    <div id="footer"></div>
+  </body>
+  <script src="/reptill/components/unload.js"></script>
+  <script src="/reptill/components/database.js"></script>
+  <script src="/reptill/components/index.js"></script>
+  <script src="/reptill/components/add-item.js"></script>
+</html>
